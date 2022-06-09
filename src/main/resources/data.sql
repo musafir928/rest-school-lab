@@ -70,28 +70,28 @@ VALUES ('1970-01-01', 'nora@email', 'Nora', 'Loyd', '123123123', '123123123', 'P
         'noraloyd', 21);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (6, '1998-01-27', 'kaya@email.com', 'Kaya', 'Bytyqi', '123123123', '0451141241', 'ACTIVE', 'kaya', 18, 4);
+VALUES (6, '1998-01-27', 'kaya@email.com', 'Kaya', 'Bytyqi', '123123123', '0451141241', 'ACTIVE', 'kaya', 4, 3);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (7, '1998-01-27', 'sara@email.com', 'Sara', 'Loyd', '123123123', '0451141241', 'ACTIVE', 'sara', 5, 5);
+VALUES (7, '1998-01-27', 'sara@email.com', 'Sara', 'Loyd', '123123123', '0451141241', 'ACTIVE', 'sara', 5, 4);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (8, '1998-01-27', 'jenie@email.com', 'Jennie', 'Loyd', '123123123', '0451141241', 'ACTIVE', 'jennie', 20, 6);
+VALUES (8, '1998-01-27', 'jenie@email.com', 'Jennie', 'Loyd', '123123123', '0451141241', 'ACTIVE', 'jennie', 6, 4);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (1, '1998-01-27', 'malt@email.com', 'Malt', 'Morina', '123123123', '0451141241', 'ACTIVE', 'malt', 1, 7);
+VALUES (1, '1998-01-27', 'malt@email.com', 'Malt', 'Morina', '123123123', '0451141241', 'ACTIVE', 'malt', 7, 1);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (2, '1998-01-27', 'troi@email.com', 'Troi', 'Morina', '123123123', '0451141241', 'ACTIVE', 'troi', 4, 8);
+VALUES (2, '1998-01-27', 'troi@email.com', 'Troi', 'Morina', '123123123', '0451141241', 'ACTIVE', 'troi', 8, 1);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (3, '1998-01-27', 'lis@email.com', 'Lis', 'Nuredini', '123123123', '0451141241', 'ACTIVE', 'lis', 2, 9);
+VALUES (3, '1998-01-27', 'lis@email.com', 'Lis', 'Nuredini', '123123123', '0451141241', 'ACTIVE', 'lis', 9, 2);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (4, '1998-01-27', 'kaan@email.com', 'Kaan', 'Nuredini', '123123123', '0451141241', 'ACTIVE', 'kaan', 17, 14);
+VALUES (4, '1998-01-27', 'kaan@email.com', 'Kaan', 'Nuredini', '123123123', '0451141241', 'ACTIVE', 'kaan', 14, 2);
 INSERT INTO public.student (id, birthday, email, first_name, last_name, password, phone_number, status, username,
                             address_id, parent_id)
-VALUES (5, '1998-01-27', 'steve@email.com', 'Steve', 'Bytyqi', '123123123', '0451141241', 'ACTIVE', 'steve', 3, 15);
+VALUES (5, '1998-01-27', 'steve@email.com', 'Steve', 'Bytyqi', '123123123', '0451141241', 'ACTIVE', 'steve', 15, 3);
 INSERT INTO public.teacher (id, birthday, education_level, email, first_name, last_name, password, phone_number, status,
                             username, address_id)
 VALUES (1, '1972-01-06', 'MASTER', 'john@email', 'John', 'Gotti', '123123123', '123123123', 'ACTIVE', 'john', 1);
