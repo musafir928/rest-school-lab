@@ -26,7 +26,7 @@ public class Teacher extends BaseEntity {
     private String password;
 
     @Column(columnDefinition = "DATE")
-    private LocalDate birthDay;
+    private LocalDate birthday;
 
     @Enumerated(EnumType.STRING)
     private Status status;

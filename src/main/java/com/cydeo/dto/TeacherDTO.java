@@ -25,7 +25,7 @@ public class TeacherDTO {
 
     private String password;
 
-    private LocalDate birthDay;
+    private LocalDate birthday;
 
     private Status status;
 
