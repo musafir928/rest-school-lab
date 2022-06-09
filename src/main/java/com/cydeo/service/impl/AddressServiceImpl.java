@@ -8,6 +8,7 @@ import com.cydeo.service.AddressService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -36,10 +37,27 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
-    public AddressDTO create(AddressDTO addressDTO) throws Exception {
+    public AddressDTO update(AddressDTO addressDTO) throws Exception {
 
         addressRepository.findById(addressDTO.getId())
-                .orElseThrow(() -> new Exception("Address Already Exists!"));
+                .orElseThrow(() -> new Exception("No Address Found!"));
+
+        Address addressToSave = mapperUtil.convert(addressDTO, new Address());
+
+        addressRepository.save(addressToSave);
+
+        return mapperUtil.convert(addressToSave, new AddressDTO());
+
+    }
+
+    @Override
+    public AddressDTO create(AddressDTO addressDTO) throws Exception {
+
+        Optional<Address> foundAddress = addressRepository.findById(addressDTO.getId());
+
+        if (foundAddress.isPresent()) {
+            throw new Exception("Address Already Exists!");
+        }
 
         Address addressToSave = mapperUtil.convert(addressDTO, new Address());
 

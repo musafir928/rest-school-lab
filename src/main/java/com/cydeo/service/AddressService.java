@@ -10,6 +10,8 @@ public interface AddressService {
 
     AddressDTO findById(Long id) throws Exception;
 
+    AddressDTO update(AddressDTO addressDTO) throws Exception;
+
     AddressDTO create(AddressDTO addressDTO) throws Exception;
 
 }
