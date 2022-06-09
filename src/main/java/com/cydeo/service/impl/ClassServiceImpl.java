@@ -24,7 +24,8 @@ public class ClassServiceImpl implements ClassService {
     @Override
     public List<ClassDTO> findAll() {
         return classRepository.findAll()
-                .stream().map(theClass -> mapperUtil.convert(theClass, new ClassDTO()))
+                .stream()
+                .map(theClass -> mapperUtil.convert(theClass, new ClassDTO()))
                 .collect(Collectors.toList());
     }
 

@@ -24,7 +24,8 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public List<CourseDTO> findAll() {
         return courseRepository.findAll()
-                .stream().map(course -> mapperUtil.convert(course,new CourseDTO()))
+                .stream()
+                .map(course -> mapperUtil.convert(course,new CourseDTO()))
                 .collect(Collectors.toList());
     }
 

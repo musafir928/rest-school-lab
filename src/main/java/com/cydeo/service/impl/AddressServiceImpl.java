@@ -25,7 +25,8 @@ public class AddressServiceImpl implements AddressService {
     @Override
     public List<AddressDTO> findAll() {
         return addressRepository.findAll()
-                .stream().map(address -> mapperUtil.convert(address, new AddressDTO()))
+                .stream()
+                .map(address -> mapperUtil.convert(address, new AddressDTO()))
                 .collect(Collectors.toList());
     }
 

@@ -24,7 +24,8 @@ public class ParentServiceImpl implements ParentService {
     @Override
     public List<ParentDTO> findAll() {
         return parentRepository.findAll()
-                .stream().map(parent -> mapperUtil.convert(parent, new ParentDTO()))
+                .stream()
+                .map(parent -> mapperUtil.convert(parent, new ParentDTO()))
                 .collect(Collectors.toList());
     }
 

@@ -24,7 +24,8 @@ public class TeacherServiceImpl implements TeacherService {
     @Override
     public List<TeacherDTO> findAll() {
         return teacherRepository.findAll()
-                .stream().map(teacher -> mapperUtil.convert(teacher, new TeacherDTO()))
+                .stream()
+                .map(teacher -> mapperUtil.convert(teacher, new TeacherDTO()))
                 .collect(Collectors.toList());
     }
 
