@@ -2,6 +2,9 @@ package com.cydeo.dto;
 
 import com.cydeo.enums.EducationLevel;
 import com.cydeo.enums.Status;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +16,10 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer"}, ignoreUnknown = true)
 public class TeacherDTO {
 
+    @JsonIgnore
     private Long id;
 
     private String firstName;
@@ -23,6 +28,7 @@ public class TeacherDTO {
     private String email;
     private String username;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private LocalDate birthday;

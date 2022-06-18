@@ -1,6 +1,9 @@
 package com.cydeo.dto;
 
 import com.cydeo.enums.AddressType;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,8 +13,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer","teacher"}, ignoreUnknown = true)
 public class AddressDTO {
 
+    @JsonIgnore
     private Long id;
 
     private String street;
@@ -22,8 +27,10 @@ public class AddressDTO {
 
     private AddressType addressType;
 
+    @JsonBackReference(value="student-reference")
     private StudentDTO student;
 
+    @JsonIgnore
     private ParentDTO parent;
 
     private TeacherDTO teacher;
